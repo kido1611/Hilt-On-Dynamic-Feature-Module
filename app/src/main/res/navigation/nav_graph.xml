@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="id.kido1611.example.hiltfeature.fragment.first.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_view_navigation"
+            app:destination="@id/view_navigation" />
+        <action
+            android:id="@+id/action_FirstFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <include-dynamic
+        android:id="@+id/view_navigation"
+        app:graphResName="view_navigation"
+        app:moduleName="view" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="id.kido1611.example.hiltfeature.fragment.edit.EditFragment"
+        android:label="edit_fragment"
+        tools:layout="@layout/edit_fragment" />
+</navigation>

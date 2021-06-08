@@ -1,0 +1,3 @@
+rootProject.name = "Hilt Feature"
+include ':app'
+include ':feature:view'
